@@ -1,0 +1,242 @@
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style-type: none;
+}
+
+a {
+    text-decoration: none;
+    color: #5a5a5a;
+}
+
+body,
+html {
+    font-family: "Montserrat";
+    font-size: 14px;
+    font-weight: 400;
+    color: #ffffff;
+    box-sizing: content-box;
+    line-height: 120%;
+    scroll-behavior: smooth;
+    background-color: #000000;
+}
+
+ul,
+ol,
+li {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-weight: inherit;
+    font-size: inherit;
+}
+
+.wrapper {
+    min-height: 100%;
+    overflow: hidden;
+}
+
+.fixed_menu {
+    position: fixed;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    right: 5%;
+    top: 20px;
+
+    &__arrows {
+        position: fixed;
+        left: 27.5%;
+        font-size: 30px;
+        display: flex;
+        gap: 5px;
+        a {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: #fff;
+            background-color: rgba(0, 0, 0, 0.7);
+            border-radius: 100%;
+            width: 32px;
+            height: 32px;
+        }
+    }
+
+    &__premium {
+        background-color: #fff;
+        padding: 5px 10px;
+        border-radius: 16px;
+        height: 30px;
+        display: flex;
+        align-items: center;
+        a {
+            color: #000;
+        }
+        &:hover {
+            transform: scale(1.05);
+        }
+    }
+
+    &__download {
+        display: flex;
+        align-items: center;
+        gap: 5px;
+        background-color: rgba(53, 53, 53, 0.44);
+        padding: 5px 10px;
+        border-radius: 16px;
+        color: #fff;
+        height: 30px;
+
+        img {
+            width: 20px;
+            height: 20px;
+        }
+        &:hover {
+            transform: scale(1.05);
+        }
+    }
+
+    &__notifications {
+        background-color: #fff;
+        border-radius: 100%;
+        width: 30px;
+        height: 30px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        img {
+            width: 25px;
+            height: 25px;
+        }
+        &:hover {
+            transform: scale(1.1);
+        }
+    }
+}
+
+.dropdown-trigger {
+    img {
+        width: 35px;
+        height: 35px;
+        object-fit: cover;
+        object-position: center;
+        border-radius: 100%;
+    }
+    &:hover {
+        transform: scale(1.1);
+    }
+}
+
+.dropdown-menu__profile {
+    position: absolute;
+    right: 0;
+    top: 130%;
+    display: none;
+    background-color: #5a5a5a;
+    border-radius: 4px;
+
+    a {
+        padding: 10px;
+        text-decoration: none;
+        color: #fff;
+    }
+
+    &.show {
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+.side__panel {
+    display: flex;
+    gap: 10px;
+}
+
+.side__panel__first {
+    width: 25%;
+}
+.side__panel__second {
+    background-color: #121212;
+    border-radius: 8px;
+    padding: 12px;
+    margin: 10px 10px 0 0;
+    width: 75%;
+}
+.side__panel__main {
+    background-color: #121212;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    gap: 20px;
+    justify-content: center;
+    border-radius: 8px;
+    padding: 12px;
+    margin: 10px 0 0 10px;
+
+}
+.side__panel__block {
+    font-size: 20px;
+    color: #fff;
+}
+.side__panel__else {
+    background-color: #121212;
+    display: grid;
+    gap: 20px;
+    border-radius: 8px;
+    padding: 12px;
+    margin: 10px 0 0 10px;
+}
+.side__panel__else__title {
+    text-align: center;
+    font-size: 24px;
+    margin-bottom: 30px;
+}
+.side__panel__block_music {
+    display: flex;
+    gap: 10px;
+    img {
+        width: 50px;
+        height: 50px;
+        border-radius: 5px;
+        object-fit: cover;
+        object-position: center;
+    }
+    border-radius: 5px;
+    padding: 5px;
+    &:hover {
+        background-color: #a5a4a47c;
+    }
+}
+.block-music__data {
+    display: grid;
+}
+.data__title {
+    font-size: 18px;
+    color: #fff;
+}
+.data__amount {
+    font-weight: 300;
+    color: #ffffff81;
+}
+
+.songs__container {
+    margin-top: 5%;
+}
+
+.title__block {
+    text-align: center;
+    font-size: 32px;
+    margin: 15px 0;
+}

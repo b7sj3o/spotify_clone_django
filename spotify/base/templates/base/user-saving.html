@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+{% load static %}
+
+
+{% block content %}
+<div class="songs__container">
+    <div class="title__block">Вподобані пісні</div>
+    {% for songs in saved_songs %}
+        <div class="song__block">
+            <div class="side__panel__block_music">
+                <img src="{% static songs.song.picture.url %}" alt="">
+                <div class="block-music__data">
+                    <div class="data__title">{{ songs.song.name }}</div>
+                    <div class="data__amount">{{ songs.song.author }}</div>
+                </div>
+                <audio controls src="{% static songs.song.song.url %}"></audio>
+                <a href="{% url 'remove-song' songs.song.id %}" class="block-music__like" style="color: red; display: flex; align-items: center; font-size: 40px; margin-left: 50px;">♥</a>
+            </div>
+        </div>
+    {% endfor %}
+</div>
+
+{% endblock %}

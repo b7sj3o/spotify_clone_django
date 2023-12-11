@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load static %}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spotify</title>
+    <link rel="stylesheet" href="{% static 'base/css/index.min.css' %}">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:100,200,300,regular,500,600,700,800,900,100italic,200italic,300italic,italic,500italic,600italic,700italic,800italic,900italic" rel="stylesheet" />
+    {% block style %}{% endblock %}
+</head>
+<body>
+    <div class="fixed_menu">
+        <div class="fixed_menu__arrows">
+            <a href=""><</a>
+            <a href="">></a>
+        </div>
+        <a href="#" class="fixed_menu__premium">Переглянути Premium</a>
+        <a href="#" class="fixed_menu__download">
+            <img src="{% static 'base/img/icons/download.png' %}" alt="">
+            Установити додаток
+        </a>
+        <a href="#" class="fixed_menu__notifications">
+            <img src="{% static 'base/img/icons/notifications.png' %}" alt="">
+        </a>
+        <a href="#" class="dropdown-trigger">
+            <img src="{% static request.user.avatar.url %}" alt="Аватар" />
+        </a>
+          
+        <div class="dropdown-menu__profile">
+            <a href="#">Акаунт</a>
+            <a href="{% url 'profile' request.user %}">Профіль</a>
+            <a href="{% url 'create-song' %}">Добавити пісню</a>
+            <a href="#">Перейти на преміум</a>
+            <a href="#">Підтримка</a>
+            <a href="#">Завантажити</a>
+            <a href="#">Налаштування</a>
+            <hr>
+            <a href="{% url 'logout' %}">Вийти</a>
+        </div>
+          
+    </div>
+    <div class="side__panel">
+        <div class="side__panel__first">
+            <div class="side__panel__main">
+                <a class="side__panel__block" href="{% url 'home' %}">Головна</a>
+                <hr>
+                <a class="side__panel__block" href="#">Пошук</a>
+            </div>
+            <div class="side__panel__else">
+                <div class="side__panel__else__title">Мої вподобання</div>
+                <a href="{% url 'user-saving' %}" class="side__panel__block_music">
+                    <img src="{% static 'base/img/avatars/default_avatar.png' %}" alt="">
+                    <div class="block-music__data">
+                        <div class="data__title">вподобані пісні</div>
+                        <div class="data__amount">{{ amount_of_songs }}  пісень</div>
+                    </div>
+                </a>
+            </div>
+        </div>
+        <div class="side__panel__second">
+            {% block content %}{% endblock %}
+        </div>
+    </div>
+    
+    <script src="{% static 'base/js/script.js' %}"></script>
+</body> 
+</html>

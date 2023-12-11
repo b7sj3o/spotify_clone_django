@@ -1,0 +1,38 @@
+.side__panel__second {
+    background: rgb(239, 166, 57);
+    background: linear-gradient(180deg, rgba(239, 166, 57, 1) 23%, rgba(131, 130, 130, 1) 76%);
+}
+
+.profile {
+    margin-top: 5%;
+    display: flex;
+    column-gap: 30px;
+}
+.profile__picture {
+    a {
+        img {
+            width: 230px;
+            height: 230px;
+            border-radius: 50%;
+            object-fit: cover;
+            object-position: center;
+        }
+    }
+}
+.profile__data {
+    display: grid;
+    gap: 50px;
+}
+.profile__username {
+    font-size: 60px;
+    a {
+        color: #fff;
+    }
+}
+.profile__amount {
+    display: flex;
+    gap: 10px;
+    font-size: 16px;
+}
+.profile__amount-item {
+}

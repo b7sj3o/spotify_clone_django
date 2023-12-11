@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+{% load static %}
+
+
+{% block content %}
+<div class="songs__container">
+    {% if messages %}
+            <ul class="messages">
+                {% for message in messages %}
+                    <li{% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</li>
+                {% endfor %}
+            </ul>
+        {% endif %}
+    {% for song in songs %}
+        <div class="song__block">
+            <div class="side__panel__block_music">
+                <img src="{% static song.picture.url %}" alt="">
+                <div class="block-music__data">
+                    <div class="data__title">{{ song.name }}</div>
+                    <div class="data__amount">{{ song.author }}</div>
+                </div>
+                <audio controls src="{% static song.song.url %}"></audio>
+                {% if song in liked_songs %}
+                    <a href="{% url 'remove-song' song.id %}" class="block-music__like" style="color: red; display: flex; align-items: center; font-size: 40px; margin-left: 50px;">♥</a>
+                {% else %}
+                    <a href="{% url 'like-song' song.id %}" class="block-music__like" style="display: flex; align-items: center; font-size: 40px; margin-left: 50px;">♥</a>
+                {% endif %}
+            </div>
+        </div>
+    {% endfor %}
+</div>
+
+{% endblock %}

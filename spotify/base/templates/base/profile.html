@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block style %}
+<link rel="stylesheet" href="{% static 'base/css/profile.min.css' %}">
+{% endblock %}
+
+
+{% block content %}
+<div class="profile">
+    <div class="profile__picture">
+        <a href=""><img src="{% static user.avatar.url %}" alt=""></a>
+    </div>
+    <div class="profile__data">
+        <h6>Профіль</h6>
+        <div class="profile__username"><a href="">{{user.username}}</a></div>
+        <div class="profile__amount">
+            <div class="profile__amount-item">{{ user.date_joined|date:"d.m.Y" }}</div>
+            <div>•</div>
+            <div class="profile__amount-item">{{ user.date_joined|date:"d.m.Y" }}</div>
+            <div>•</div>
+            <div class="profile__amount-item">{{ user.date_joined|date:"d.m.Y" }}</div>
+        </div>
+    </div>
+</div>
+{% endblock %}

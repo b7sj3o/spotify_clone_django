@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <main>
+        <div class="container">
+            <div class="login__page">
+                <div class="login__title">Увійти в Spotify</div>
+                <div class="login__social-media">
+                    <div class="login__social-media__item">
+                        <img src="" alt="">
+                        <p>Продовжити через Google</p>
+                    </div>
+                    <div class="login__social-media__item">
+                        <img src="" alt="">
+                        <p>Продовжити через Facebook</p>
+                    </div>
+                    <div class="login__social-media__item">
+                        <img src="" alt="">
+                        <p>Продовжити через Apple</p>
+                    </div>
+                </div>
+                <hr>
+                <form action="" method="POST">
+                    {% csrf_token %}
+                    <label for="">Ел. пошта або ім’я користувача</label>
+                    <input type="text" name="username" class="login__input">
+                    <label for="">Пароль</label>
+                    <input type="password" name="password" class="login__input">
+                    <label for="">Запам’ятати мене</label>
+                    <input type="checkbox" name="save_user" class="login__input">  
+                    <input type="submit" value="Увійти">   
+                </form>
+                <hr>
+                <a href="#">Забули пароль?</a>
+                <hr>
+                <p>Немає акаунта?<a href="#">Зареєструватися в Spotify</a></p>
+            </div>
+        </div>
+    </main>
+</body>
+</html>

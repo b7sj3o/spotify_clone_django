@@ -1,0 +1,90 @@
+.container{
+    max-width: 40%;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+.header{
+    background-color: rgb(222, 222, 222);
+}
+.header__icon{
+    img {
+        width: 150px;
+        margin-left: 15%;
+    }
+}
+
+.login__page{
+    background-color: #121212;
+    border-radius: 8px;
+    padding: 22px;
+    margin: 50px 10px 0 0;
+}
+.login__title{
+    text-align: center;
+    font-size: 48px;
+}
+
+.login__form {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    padding: 40px 0 20px 0;
+}
+
+.login__social-media{
+
+}
+.login__social-media__item{
+
+}
+
+.form__item {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+
+.login__input{
+    border: none;
+    background: none;
+    border-bottom: 2px solid rgb(136, 136, 136);
+    color: #fff;
+    height: 50px;
+
+    &[type='file'] {
+        border: none;
+        height: auto;
+    }
+
+  
+}
+
+.btn__form {
+    height: 40px;
+    color: #fff;
+    border-radius: 5px;
+    padding: 10px 25px;
+    background: transparent;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow:inset 2px 2px 2px 0px rgba(255,255,255,.5),
+    7px 7px 20px 0px rgba(0,0,0,.1),
+    4px 4px 5px 0px rgba(0,0,0,.1);
+    outline: none;
+    background: rgb(6,14,131);
+    background: linear-gradient(0deg, rgb(107, 107, 110) 0%, rgb(50, 50, 56) 100%);
+    border: none;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+
+    &:hover {
+        background: rgb(0,3,255);
+        background: linear-gradient(0deg, rgb(99, 99, 102) 0%, rgb(70, 73, 75) 100%);
+    }
+}
+
